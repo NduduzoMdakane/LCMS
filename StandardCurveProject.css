@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.3;
+  /* background-color: rgb(241, 246, 247); */
+  background: url(Lab1.jpg);
+  color: rgb(194, 17, 17);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerContainer {
+  width: 300px;
+}
+
+.showMore {
+  background-color: orange;
+  text-align: center;
+  display: none;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  display: none; /* make it disappear in DOM*/
+  color: rgb(194, 17, 17);
+}
+
+.showMorePage {
+  height: 96vh;
+  /* background-color: aqua; */
+  text-align: center;
+  padding: 3.2rem 3rem;
+  margin: 1rem;
+}
+
+.showMore:hover {
+  color: rgb(133, 8, 8);
+}
+
+.block {
+  text-align: center;
+  background-color: rgba(252, 166, 7);
+  border-radius: 12px;
+  margin: 1rem;
+  padding: 5rem 3rem;
+}
+
+.fullConversionBlock {
+  display: none; /* make it disappear in DOM*/
+  padding: 1rem 1rem;
+  height: 96vh;
+  width: 41rem;
+}
+
+.fullConcentrationBlock {
+  display: none;
+  /* background-color: aqua; */
+  padding: 0.7rem 3rem;
+}
+
+.fullEEBlock {
+  display: none; /* make it disappear in DOM*/
+  height: 96vh;
+  width: 30rem;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.partTitle {
+  /* background-color: aqua; */
+  font-weight: 600;
+  margin: 1rem 1rem 0.1rem;
+  font-size: 1.2rem;
+}
+
+.menu {
+  background-color: rgba(252, 166, 7);
+  color: rgba(194, 17, 17, 0.6);
+  padding: 0.4rem 0.7rem;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-style: oblique;
+}
+
+.menu:hover {
+  font-weight: bolder;
+  color: rgb(194, 17, 17);
+}
+
+.h1Heading {
+  /* background-color: blueviolet; */
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+
+.eeSBlock {
+  /* background-color: orchid; */
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.eeS,
+.eeR {
+  /* background-color: blue; */
+  padding: 0.2rem;
+  margin: 0.6rem 0.1rem 0.4rem 0.1rem;
+}
+
+.enterConvDetails {
+  /* background-color: blue; */
+  padding: 0.1rem;
+  margin: 0.4rem 0.1rem 0rem 0.1rem;
+}
+
+#eeValue {
+  background-color: white;
+  margin: 4rem 0.1rem 0.1rem 0.1rem;
+  padding: 0.45rem;
+  border-radius: 3px;
+}
+
+.eeInputs {
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.convInputs {
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  margin: none;
+  border-radius: 2px;
+  /* background-color: red; */
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.standardCurveEquationConfirmation,
+.amineConcentrationConversionEquationConfirmation,
+.ketoneConcentrationConversionEquationConfirmation {
+  /* background-color: green; */
+  margin: 0.4rem 0.4rem 1rem;
+  padding: 0.4rem;
+  font-style: oblique;
+  font-weight: 550;
+  color: rgba(126, 7, 7, 0.25);
+}
+
+.standardCurveMaxPeakAreaValue {
+  margin-top: 2rem;
+}
+
+.standardCurveAnswers {
+  margin: 0.7rem 0.1rem 1rem;
+  padding: 0.5rem;
+  font-style: oblique;
+  font-weight: 550;
+  color: rgba(126, 7, 7, 0.6);
+}
+
+.standardCurveAnswersContainer {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem;
+  gap: 1rem;
+  padding-top: 0.6rem;
+}
+
+.amineAndKetoneContainer {
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.compoundContainer {
+  background-color: rgba(126, 7, 7, 0.045);
+  padding: 0.2rem 1rem 1.8rem;
+  margin: 1.5rem 1rem 0.5rem;
+  border-radius: 9px;
+}
+
+.amineAndKetoneHeading {
+  background-color: rgba(126, 7, 7, 0.045);
+  margin: 0.1rem 1rem 0rem;
+  padding: 1rem;
+  border-radius: 7px;
+}
+
+.concentrationConversionAswers {
+  background-color: rgba(126, 7, 7, 0.1);
+  margin: 1rem 1rem 0rem;
+  padding: 0.1rem;
+  border-radius: 7px;
+  text-align: center;
+}
+
+/* background image + gradient */
+main {
+  background: url(Lab1.jpg);
+  position: relative;
+  z-index: 2;
+}
+
+/* Add the gradient background with pseudo-elements */
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(243, 226, 193, 0.9) 20%,
+    rgba(248, 197, 110, 0.9) 50%,
+    rgba(248, 172, 32, 0.9)
+  );
+  background-repeat: no-repeat;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  z-index: -1;
+}

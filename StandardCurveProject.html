@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCMS Calculations</title>
+    <link rel="stylesheet" href="StandardCurveProject.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div centerContainer>
+        <section class="eeCalculation">
+          <div class="block fullEEBlock">
+            <input type="button" class="menu" value="X" />
+            <h1 class="blockTitle h1Heading">Calculation of % ee</h1>
+            <div class="eepeakArea">
+              <div class="eeSBlock">
+                <p class="eeS">
+                  Peak area for <span class="italic"> S</span> enantiomer:
+                </p>
+                <input
+                  type="number"
+                  name="sPeakArea"
+                  id="sPeakArea"
+                  class="allInputs eeInputs"
+                />
+              </div>
+              <div class="eeRBlock">
+                <p class="eeR">
+                  Peak area for <span class="italic"> R</span> enantiomer:
+                </p>
+                <input
+                  type="number"
+                  name="rPeakArea"
+                  id="rPeakArea"
+                  class="allInputs eeInputs"
+                />
+              </div>
+            </div>
+            <div class="eeResult"></div>
+            <p id="eeValue">---</p>
+          </div>
+        </section>
+
+        <!-- =========================================Standard Curve % Yield=================================================== -->
+        <section class="conversionCalculation">
+          <div class="block fullConversionBlock">
+            <input type="button" class="menu" value="X" />
+            <h1 class="equationHeading h1Heading">% Yield</h1>
+
+            <!-- Gradient & Intercept -->
+
+            <p class="standardCurveGradient enterConvDetails">Gradient:</p>
+            <input
+              type="number"
+              name="standardCurveGradient"
+              id="standardCurveGradient"
+              class="allInputs convInputs"
+            />
+            <p class="standardCurveIntercept enterConvDetails">Intercept:</p>
+            <input
+              type="number"
+              name="standardCurveIntercept"
+              id="standardCurveIntercept"
+              class="allInputs convInputs"
+            />
+
+            <!-- Equation confirmation -->
+            <p class="standardCurveEquationConfirmation enterConvDetails">
+              Your equation is:
+            </p>
+
+            <!-- Experimental Details -->
+
+            <p class="standardCurveMolarMass enterConvDetails">MW:</p>
+            <input
+              type="number"
+              name="standardCurveMolarMass"
+              id="standardCurveMolarMass"
+              class="allInputs convInputs"
+            />
+            <!-- Expected mol -->
+            <p
+              class="standardCurveExpectedPercentageConversion enterConvDetails"
+            >
+              Total Mol Expected:
+            </p>
+            <input
+              type="number"
+              name="standardCurveExpectedPercentageConversion"
+              id="standardCurveExpectedPercentageConversion"
+              class="allInputs convInputs"
+            />
+
+            <p class="standardCurveMaxPeakAreaValue enterConvDetails">
+              Peak area (max):
+            </p>
+
+            <input
+              type="number"
+              name="standardCurveMaxPeakAreaValue"
+              id="standardCurveMaxPeakAreaValue"
+              class="allInputs convInputs"
+            />
+            <p class="standardCurvePeakArea enterConvDetails">
+              Peak area (experimental):
+            </p>
+
+            <input
+              type="number"
+              name="standardCurvePeakArea"
+              id="standardCurvePeakArea"
+              class="allInputs convInputs"
+            />
+            <div class="standardCurveAnswersContainer">
+              <p
+                class="standardCurveCalculatedConcentration standardCurveAnswers enterConvDetails"
+              >
+                --- ppm
+              </p>
+              <p
+                class="standardCurveCalculatedMol standardCurveAnswers enterConvDetails"
+              >
+                --- mol
+              </p>
+              <p
+                class="standardCurveCalculatedConversion standardCurveAnswers enterConvDetails"
+              >
+                --- % conversion
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Calculation of conversion -->
+        <section concentrationConversionPart>
+          <div class="block fullConcentrationBlock">
+            <input type="button" class="menu" value="X" />
+            <h1 class="equationHeading h1Heading amineAndKetoneHeading">
+              Standard Curve Results (y = mx + c)
+            </h1>
+
+            <!-- container for amine and ketone details -->
+            <div class="amineAndKetoneContainer">
+              <!-- container for amine details -->
+              <div class="amineContainer compoundContainer">
+                <!-- Gradient & Intercept for amine -->
+                <h2 class="partTitle">Amine</h2>
+                <p
+                  class="amineConcentrationConversionGradient enterConvDetails"
+                >
+                  Gradient:
+                </p>
+                <input
+                  type="number"
+                  name="amineConcentrationConversionGradient"
+                  id="amineConcentrationConversionGradient"
+                  class="allInputs convInputs"
+                />
+                <p
+                  class="amineConcentrationConversionIntercept enterConvDetails"
+                >
+                  Intercept:
+                </p>
+                <input
+                  type="number"
+                  name="amineConcentrationConversionIntercept"
+                  id="amineConcentrationConversionIntercept"
+                  class="allInputs convInputs"
+                />
+
+                <!-- Equation confirmation -->
+                <p
+                  class="amineConcentrationConversionEquationConfirmation enterConvDetails"
+                >
+                  Your equation is:
+                </p>
+
+                <!-- Peak area for amine -->
+                <p
+                  class="amineConcentrationConversionMaxPeakArea enterConvDetails"
+                >
+                  Peak area (max):
+                </p>
+
+                <input
+                  type="number"
+                  name="amineConcentrationConversionMaxPeakArea"
+                  id="amineConcentrationConversionMaxPeakArea"
+                  class="allInputs convInputs"
+                />
+                <p
+                  class="amineConcentrationConversionPeakArea enterConvDetails"
+                >
+                  Peak area (experimental):
+                </p>
+
+                <input
+                  type="number"
+                  name="amineConcentrationConversionPeakArea"
+                  id="amineConcentrationConversionPeakArea"
+                  class="allInputs convInputs"
+                />
+              </div>
+              <!-- end of amine -->
+
+              <!-- Gradient & Intercept for ketone -->
+              <div class="ketoneContainer compoundContainer">
+                <!-- ketone container -->
+                <h2 class="partTitle">Ketone</h2>
+                <p
+                  class="ketoneConcentrationConversionGradient enterConvDetails"
+                >
+                  Gradient:
+                </p>
+                <input
+                  type="number"
+                  name="ketoneConcentrationConversionGradient"
+                  id="ketoneConcentrationConversionGradient"
+                  class="allInputs convInputs"
+                />
+                <p
+                  class="ketoneConcentrationConversionIntercept enterConvDetails"
+                >
+                  Intercept:
+                </p>
+                <input
+                  type="number"
+                  name="ketoneConcentrationConversionIntercept"
+                  id="ketoneConcentrationConversionIntercept"
+                  class="allInputs convInputs"
+                />
+
+                <!-- Equation confirmation -->
+                <p
+                  class="ketoneConcentrationConversionEquationConfirmation enterConvDetails"
+                >
+                  Your equation is:
+                </p>
+
+                <!-- Peak area for ketone -->
+                <p
+                  class="ketoneConcentrationConversionMaxPeakAreaValue enterConvDetails"
+                >
+                  Peak area (max):
+                </p>
+
+                <input
+                  type="number"
+                  name="ketoneConcentrationConversionMaxPeakArea"
+                  id="ketoneConcentrationConversionMaxPeakArea"
+                  class="allInputs convInputs"
+                />
+                <p
+                  class="ketoneConcentrationConversionPeakArea enterConvDetails"
+                >
+                  Peak area (experimental):
+                </p>
+
+                <input
+                  type="number"
+                  name="ketoneConcentrationConversionPeakArea"
+                  id="ketoneConcentrationConversionPeakArea"
+                  class="allInputs convInputs"
+                />
+              </div>
+
+              <!-- end of ketone -->
+            </div>
+
+            <!-- Reporting the conversion -->
+            <div
+              class="standardCurveAnswersContainer concentrationConversionAswers"
+            >
+              <p
+                class="reportedConcentrationConversion standardCurveAnswers enterConvDetails"
+              >
+                --- % ketone converted
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- show more page -->
+        <section>
+          <div class="showMorePage">
+            <div class="showMore eeExpansion displayBlock">
+              <p>Calculation of % ee</p>
+            </div>
+            <div class="showMore concentrationConversion displayBlock">
+              Conversion from concentration
+            </div>
+            <div class="showMore convExpansion displayBlock">
+              <p>Calculation of % Yield</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="StandardCurveProject.js"></script>
+  </body>
+</html>
